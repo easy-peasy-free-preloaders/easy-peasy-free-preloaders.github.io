@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url("../../fonts/SourceCodePro-Regular.woff2") format("woff2"), url("../../fonts/SourceCodePro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Menlo Bold';
+  src: url("../../fonts/Menlo-Bold.woff2") format("woff2"), url("../../fonts/Menlo-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
 * {
   margin: 0;
   padding: 0;
@@ -32,11 +44,50 @@ a {
     outline: none; }
 
 body {
-  background-color: #090C15; }
+  background-color: #090C15;
+  color: #fff;
+  font-family: 'Source Code Pro', Sans-Serif;
+  font-size: 18px; }
+
+.main {
+  padding: 0 10vh;
+  margin: 0 -2%; }
 
 .header {
-  padding: 10vh 11vh; }
+  padding: 6vh 10vh 4vh; }
   .header__title {
     color: #56BE89;
-    font-family: 'Menlo', Sans-Serif;
-    font-size: 48px; }
+    font-family: 'Menlo Bold', Sans-Serif;
+    font-size: 48px;
+    margin-bottom: 0.5em; }
+  .header__subtitle {
+    font-size: 18px;
+    font-weight: 400; }
+
+.tile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .tile__item {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: calc(100% / 6);
+    padding-bottom: calc(90% / 6); }
+
+.preloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 5%;
+  background-color: #181D2D; }
