@@ -85,12 +85,12 @@ body {
       max-width: 2380px; } }
 
 .header {
-  padding: 6vh 0 4vh; }
+  padding: 11.5vh 0 5vh; }
   .header__title {
     color: #56BE89;
     font-family: 'Menlo Bold', Sans-Serif;
     font-size: 48px;
-    margin-bottom: 0.5em; }
+    margin-bottom: 3vh; }
   .header__subtitle {
     font-size: 18px;
     font-weight: 400; }
