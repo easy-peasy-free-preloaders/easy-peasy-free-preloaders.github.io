@@ -280,8 +280,8 @@ body {
 
 .preloader--2 {
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   top: 0;
   bottom: 0;
   left: 0;
@@ -292,27 +292,27 @@ body {
     height: 50%;
     position: absolute; }
   .preloader--2 .item-1 {
-    background-color: #BA5FE4;
+    background-color: #68DBA4;
     top: 0;
     left: 0;
     z-index: 1;
     -webkit-animation: item-1_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
     animation: item-1_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite; }
   .preloader--2 .item-2 {
-    background-color: #FFEF5B;
+    background-color: #5B76FF;
     top: 0;
     right: 0;
     -webkit-animation: item-2_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
     animation: item-2_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite; }
   .preloader--2 .item-3 {
-    background-color: #68DBA4;
+    background-color: #F7FE72;
     bottom: 0;
     right: 0;
     z-index: 1;
     -webkit-animation: item-3_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
     animation: item-3_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite; }
   .preloader--2 .item-4 {
-    background-color: #FF967E;
+    background-color: #F58FDF;
     bottom: 0;
     left: 0;
     -webkit-animation: item-4_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
