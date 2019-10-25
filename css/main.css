@@ -250,6 +250,7 @@ body {
   min-width: 600px;
   background-color: #181D2D; }
   .aside__default {
+    height: 100%;
     padding: 16vh 10% 5vh; }
   .aside__logo {
     margin-bottom: 7vh; }
@@ -262,26 +263,49 @@ body {
     font-size: 18px;
     font-weight: 400;
     line-height: 140%; }
+  .aside__svg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 122px;
+    width: 132px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .aside__svg svg {
+      width: 100%;
+      height: 100%; }
+    .aside__svg:hover {
+      width: 230px;
+      height: 212.5px; }
 
 .preloader__wrapper {
   width: 80%;
   padding-bottom: 71.1%;
   margin: 10%;
+  border: 2px solid transparent;
   border-radius: 5%;
   background-color: #181D2D;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+  .preloader__wrapper:hover {
+    border-color: #56BE89; }
+  .preloader__wrapper--active {
+    border-color: #56BE89;
+    -webkit-box-shadow: 0px 4px 10px rgba(104, 219, 164, 0.25);
+    box-shadow: 0px 4px 10px rgba(104, 219, 164, 0.25); }
 
-.preloader--1 {
+.preloader1 {
   position: absolute;
   top: 50%;
   left: 50%;
   margin: -44px 0 0 -44px;
   width: 88px;
   height: 88px; }
-  .preloader--1::before {
+  .preloader1::before {
     -webkit-animation-delay: 1s;
     animation-delay: 1s; }
-  .preloader--1::before, .preloader--1::after {
+  .preloader1::before, .preloader1::after {
     content: "";
     position: absolute;
     top: 0;
@@ -303,7 +327,7 @@ body {
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite; }
 
-.preloader--2 {
+.preloader2 {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -312,33 +336,33 @@ body {
   left: 0;
   right: 0;
   margin: auto; }
-  .preloader--2 .item {
+  .preloader2 .preloader__child {
     width: 50%;
     height: 50%;
     position: absolute; }
-  .preloader--2 .item-1 {
-    background-color: #68DBA4;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    -webkit-animation: item-1_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
-    animation: item-1_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite; }
-  .preloader--2 .item-2 {
-    background-color: #5B76FF;
-    top: 0;
-    right: 0;
-    -webkit-animation: item-2_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
-    animation: item-2_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite; }
-  .preloader--2 .item-3 {
-    background-color: #F7FE72;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-    -webkit-animation: item-3_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
-    animation: item-3_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite; }
-  .preloader--2 .item-4 {
-    background-color: #F58FDF;
-    bottom: 0;
-    left: 0;
-    -webkit-animation: item-4_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
-    animation: item-4_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite; }
+    .preloader2 .preloader__child--1 {
+      background-color: #68DBA4;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      -webkit-animation: item-1_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
+      animation: item-1_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite; }
+    .preloader2 .preloader__child--2 {
+      background-color: #5B76FF;
+      top: 0;
+      right: 0;
+      -webkit-animation: item-2_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
+      animation: item-2_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite; }
+    .preloader2 .preloader__child--3 {
+      background-color: #F7FE72;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      -webkit-animation: item-3_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
+      animation: item-3_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite; }
+    .preloader2 .preloader__child--4 {
+      background-color: #F58FDF;
+      bottom: 0;
+      left: 0;
+      -webkit-animation: item-4_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
+      animation: item-4_move 5s cubic-bezier(0.6, 0.01, 0.4, 1) infinite; }

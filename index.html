@@ -1,81 +1,60 @@
 <!doctype html>
 <html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>title</title>
-	<link rel="stylesheet" href="./css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>title</title>
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-	<main class="main" id="app">
-		<div class="tile__wrapper">
-			<ul class="tile">
-				<li class="tile__item">
-					<div class="preloader__wrapper">
-						<div class="preloader preloader--1"></div>
-					</div>
-				</li>
-				<li class="tile__item">
-					<div class="preloader__wrapper">
-						<div class="preloader preloader--2">
-							<div class="item item-1"></div>
-							<div class="item item-2"></div>
-							<div class="item item-3"></div>
-							<div class="item item-4"></div>
-						</div>
-					</div>
-				</li>
-				<li class="tile__item">
-					<div class="preloader__wrapper">
-						<div class="preloader"></div>
-					</div>
-				</li>
-				<li class="tile__item">
-					<div class="preloader__wrapper">
-						<div class="preloader"></div>
-					</div>
-				</li>
-				<li class="tile__item">
-					<div class="preloader__wrapper">
-						<div class="preloader"></div>
-					</div>
-				</li>
-				<li class="tile__item">
-					<div class="preloader__wrapper">
-						<div class="preloader"></div>
-					</div>
-				</li>
-				<li class="tile__item">
-					<div class="preloader__wrapper">
-						<div class="preloader"></div>
-					</div>
-				</li>
-				<li class="tile__item">
-					<div class="preloader__wrapper">
-						<div class="preloader"></div>
-					</div>
-				</li>
-				<li class="tile__item">
-					<div class="preloader__wrapper">
-						<div class="preloader"></div>
-					</div>
-				</li>
-				<li class="tile__item">
-					<div class="preloader__wrapper">
-						<div class="preloader"></div>
-					</div>
-				</li>
-			</ul>
-		</div>
-		<aside class="aside">
-			<div class="aside__default">
-				<img class="aside__logo" src="img/logo.svg" alt="logo">
-				<h1 class="aside__title">Easy-peasy<br>free preloaders</h1>
-				<h2 class="aside__subtitle">A carefully crafted collection designed with<br> a focus on fluidity, simplicity, and ease of use.</h2>
-			</div>
-		</aside>
-	</main>
+<main class="main" id="app">
+    <div class="tile__wrapper">
+        <ul class="tile">
+            <li
+                v-for="(item, index) in items"
+                class="tile__item"
+            >
+                <div
+                    class="preloader__wrapper"
+                    @click="sort(item, index)"
+                    :class="{'preloader__wrapper--active': index === activeIndex}"
+                >
+                    <div
+                            class="preloader"
+                            :class="'preloader' + (index + 1)"
+                            style="color: #fff;"
+                    >
+                        <template v-if="item.spans">
+                            <div
+                                v-for="(span, index) in item.spans"
+                                class="preloader__child"
+                                :class="'preloader__child--' + (index + 1)"
+                            ></div>
+                        </template>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <aside class="aside">
+        <div class="aside__default">
+            <img class="aside__logo" src="img/logo.svg" alt="logo">
+            <h1 class="aside__title">Easy-peasy<br>free preloaders</h1>
+            <h2 class="aside__subtitle">A carefully crafted collection designed with<br> a focus on fluidity,
+                simplicity, and ease of use.</h2>
+            <span class="aside__svg">
+                <svg viewBox="0 0 132 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M34 122C127.162 113.595 132 25 132 0C132 0 128 67.5 40.5 84C50 117 0.5 122 0.5 122H34Z" fill="#0D121F"/>
+                </svg>
+            </span>
+            <svg class="aside__svg" viewBox="0 0 132 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34 122C127.162 113.595 132 25 132 0C132 0 128 67.5 40.5 84C50 117 0.5 122 0.5 122H34Z" fill="#0D121F"/>
+            </svg>
+        </div>
+    </aside>
+</main>
 <script src="js/vue.js"></script>
 <script src="js/main.js"></script>
 </body>
